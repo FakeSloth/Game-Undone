@@ -1,0 +1,20 @@
+{
+  "name": "gameundone",
+  "version": "0.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fakesloth/fakesloth.github.io.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fakesloth/fakesloth.github.io.git/issues"
+  },
+  "homepage": "https://gameundone.com",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^0.18.0"
+  }
+}
