@@ -1,0 +1,29 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Game Undone</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  </head>
+  <body>
+
+    <h1>Hello World!</h1>
+    <my-app></my-app>
+
+    <script src="/quickstart/dist/es6-shim.js"></script>
+
+    <script>
+      System.path = {
+        'angular2/*':'/quickstart/angular2/*.js', // Angular
+        'rtts_assert/*': '/quickstart/rtts_assert/*.js', //Runtime assertions
+        'app': 'app.es6' // The my-app component
+      }; 
+
+      System.import('app'); // start app
+    </script>
+  </body>
+</html>

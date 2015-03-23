@@ -1,29 +1,48 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Game Undone</title>
-    <meta name="description" content="">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Example</title>
+    <meta name="description" content="Example">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/main.css">
   </head>
   <body>
 
-    <h1>Hello World!</h1>
-    <my-app></my-app>
+    <div id="books">
+      <form id="addBook" action="#">
+        <label for="coverImage">CoverImage: </label><input id="coverImage" type="file">
+        <label for="title">Title: </label><input id="title" type="text">
+        <label for="author">Author: </label><input id="author" type="text">
+        <label for="releaseDate">Release date: </label><input id="releaseDate" type="text">
+        <label for="keywords">Keywords: </label><input id="keywords" type="text">
+        <button id="add" class="btn btn-primary">Add</button>
+      </form>
+    </div>
 
-    <script src="/quickstart/dist/es6-shim.js"></script>
-
-    <script>
-      System.path = {
-        'angular2/*':'/quickstart/angular2/*.js', // Angular
-        'rtts_assert/*': '/quickstart/rtts_assert/*.js', //Runtime assertions
-        'app': 'app.es6' // The my-app component
-      }; 
-
-      System.import('app'); // start app
+    <script id="bookTemplate" type="text/template">
+      <img src="{{ coverImage }}">
+      <ul>
+        <li>{{ title }}</li>
+        <li>{{ author }}</li>
+        <li>{{ releaseDate }}</li>
+        <li>{{ keywords }}</li>
+      </ul>
+      <button class="delete btn btn-danger">Delete</button>
     </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.16/backbone.localStorage-min.js"></script>
+    <script src="/js/models/book.js"></script>
+    <script src="/js/collections/library.js"></script>
+    <script src="/js/views/book.js"></script>
+    <script src="/js/views/library.js"></script>
+    <script src="/js/app.js"></script>
   </body>
 </html>
